@@ -1,4 +1,4 @@
-package com.devsuperior.dsmeta.entidades;
+package com.devsuperior.dsmeta.entities;
 
 import java.time.LocalDate;
 
@@ -8,28 +8,30 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "tb_sales")
-public class Sales {
 
+public class Sale {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private long id;
 	private String sellerName;
 	private Integer visited;
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
 	
-	public Sales() {
+	public Sale() {
 		
 	}
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -74,4 +76,5 @@ public class Sales {
 	}
 	
 	
+
 }

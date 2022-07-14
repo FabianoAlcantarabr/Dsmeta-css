@@ -9,16 +9,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.devsuperior.dsmeta.entidades.Sales;
-import com.devsuperior.dsmeta.repositories.SalesRepository;
+import com.devsuperior.dsmeta.entities.Sale;
+import com.devsuperior.dsmeta.repositories.SaleRepository;
 
 @Service
-public class SalesService {
+public class SaleService {
 	
 	@Autowired
-	private SalesRepository repository;
+	private SaleRepository repository;
 	
-	public Page<Sales> findSales(String minDate, String maxDate, Pageable pageable) {
+	public Page<Sale> findSales(String minDate, String maxDate, Pageable pageable) {
 		
 		LocalDate today = LocalDate.ofInstant(Instant.now(), ZoneId.systemDefault());
 		
@@ -28,5 +28,5 @@ public class SalesService {
 		return repository.findSales(min, max, pageable);
 		
 	}
-	
+
 }
