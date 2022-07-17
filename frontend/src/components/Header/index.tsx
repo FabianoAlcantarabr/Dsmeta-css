@@ -10,7 +10,7 @@ function Header() {
                 <img src={logo} alt="DSMeta" />
                 <h1>DSMeta</h1>
                 <p>Desenvolvido por
-                    <a href="https://www.instagram.com/fabianofariabr/">Fabiano Alcantara</a>
+                    <a href="https://www.linkedin.com/in/eng-fabiano-alcantara/">Fabiano Alcantara</a>
                 </p>
             </div>
         </header>
